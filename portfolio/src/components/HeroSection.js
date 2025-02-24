@@ -1,33 +1,52 @@
-import React from 'react'
-import './HeroSection.css'
-import { Button } from './Button'
-import '../App.css'
+import React, { useEffect, useRef } from 'react';
+import Typed from 'typed.js';
+import './HeroSection.css';
+import { Button } from './Button';
+import '../App.css';
 
 function HeroSection() {
+  const subTextElement = useRef(null);
+
+  useEffect(() => {
+    const subTextOptions = {
+      strings: [
+        'a Full Stack Developer',
+        'a Computer Enthusiast',
+        'a Problem Solver',
+        'a Cyber Security Consultant',
+        'a Fast Learner',
+      ],
+      typeSpeed: 50,
+      backSpeed: 50,
+      backDelay: 2000,
+      loop: true,
+    };
+
+    const subTyped = new Typed(subTextElement.current, subTextOptions);
+
+    return () => {
+      subTyped.destroy();
+    };
+  }, []);
+
   return (
     <div className='hero-container'>
       {/* <video src='/videos/video-2.mp4' autoPlay loop muted /> */}
-      <h1> ADVENTURE AWAITS</h1>
-      <p>What are you waiting for?</p>
+      <h1>Welcome to my website</h1>
+      <p>
+        I am <span ref={subTextElement}></span>
+      </p>
       <div className='hero-btns'>
-        <Button
-          className='btns'
-          buttonStyle='btn--outline'
-          buttonSize='btn--large'
-          >
-          GET STARTED
-        </Button>
         <Button
           className='btns'
           buttonStyle='btn--primary'
           buttonSize='btn--large'
-          >
-          WATCH TRAILER <i className='far fa-play-circle' />
+        >
+          View My Work
         </Button>
         </div>
     </div>
-  )
+  );
 }
 
-
-export default HeroSection
+export default HeroSection;

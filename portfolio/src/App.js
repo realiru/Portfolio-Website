@@ -3,8 +3,8 @@ import Navbar from './components/Navbar.js';
 import './App.css';
 import Home from './components/pages/Home.js';
 import Services from './components/pages/Services.js';
-import SignUp from './components/pages/SignUp.js';
 import Products from './components/pages/Products.js';
+import ContactMe from './components/pages/ContactMe.js';
 
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
         <Route path='/' exact element={<Home />} />
         <Route path='/services' element={<Services />} />
         <Route path='/products' element={<Products />} />
-        <Route path='/sign-up' element={<SignUp />} />
+        <Route path='/contactme' element={<ContactMe />} />
       </Routes>
     </Router>
   );

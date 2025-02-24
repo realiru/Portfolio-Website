@@ -8,7 +8,7 @@ video {
 
 .hero-container {
     background: url('../../public/images/img-home.jpg') center center/cover no-repeat;
-    height: 100vh;
+    height: calc(100vh + 80px); /* Extend the height to include the navbar */
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -16,6 +16,8 @@ video {
     align-items: center;
     box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
     object-fit: contain;
+    margin-top: -80px; /* Pull the hero section up to cover the navbar */
+    padding-top: 80px; /* Add padding to account for the navbar height */
 }
 
 .hero-container > h1 {
