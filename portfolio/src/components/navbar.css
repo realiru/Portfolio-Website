@@ -13,9 +13,7 @@
 
 .navbar.scrolled {
     background-color: rgba(0, 0, 0, 0.7);
-    transition: background-color 0.3s ease-in-out;
 }
-
 
 .navbar-container {
     display: flex;
@@ -26,10 +24,9 @@
 }
 
 .navbar-logo-img {
-
-    height: 4rem; /* Adjust the height as needed */
+    height: 4rem;
     width: auto;
-  }
+}
 
 .navbar-logo {
     color: #fff;
@@ -40,6 +37,10 @@
     font-size: 2rem;
     display: flex;
     align-items: center;
+}
+
+.navbar-logo-text {
+    display: inline;
 }
 
 .fa-typo3 {
@@ -107,7 +108,6 @@
         justify-content: flex-start; 
         padding-top: 50px; 
         transition: left 0.5s ease-in-out;
-
     }
 
     .nav-item {
@@ -139,8 +139,16 @@
     .navbar-logo {
         position: absolute;
         top: 0;
-        left: 0;
-        transform: translate(25%, 50%);
+        left: 50%;
+        transform: translate(-50%, 50%);
+    }
+
+    .navbar-logo-text {
+        display: none;
+    }
+
+    .navbar-logo-img {
+        height: 5rem; /* Increase the height for mobile */
     }
 
     .menu-icon {
