@@ -12,8 +12,10 @@
 }
 
 .navbar.scrolled {
-    background-color: rgba(0, 0, 0, 0.8); /* Slight background color */
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: background-color 0.3s ease-in-out;
 }
+
 
 .navbar-container {
     display: flex;
@@ -22,6 +24,12 @@
     height: 80px;
     max-width: 1500px;
 }
+
+.navbar-logo-img {
+
+    height: 4rem; /* Adjust the height as needed */
+    width: auto;
+  }
 
 .navbar-logo {
     color: #fff;
@@ -98,6 +106,8 @@
         align-items: center; 
         justify-content: flex-start; 
         padding-top: 50px; 
+        transition: left 0.5s ease-in-out;
+
     }
 
     .nav-item {
