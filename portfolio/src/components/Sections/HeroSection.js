@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from 'react';
 import Typed from 'typed.js';
 import './HeroSection.css';
-import { Button } from './Button';
-import '../App.css';
+import { Button } from '../Button';
+import '../../App.css';
 
 function HeroSection() {
   const subTextElement = useRef(null);
