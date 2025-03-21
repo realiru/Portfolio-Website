@@ -32,7 +32,7 @@ function HeroSection() {
   return (
     <div className='hero-container'>
       {/* <video src='/videos/video-2.mp4' autoPlay loop muted /> */}
-      <h1>Welcome to my website</h1>
+      <h1>Hi, I'm <p style={{ color: '#5D3A1A' }}>Hamzah</p></h1>
       <p>
         I am <span ref={subTextElement}></span>
       </p>

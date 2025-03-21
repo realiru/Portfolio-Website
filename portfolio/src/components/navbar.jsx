@@ -108,7 +108,6 @@ function Navbar() {
               <circle id="nose" cx="48.97" cy="57.44" r="5.83" style={{ fill: "#401900" }} />
             </g>
           </svg>
-          <span className="navbar-logo-text">Hamzah Patel</span>
         </Link>
         <div className="menu-icon" onClick={handleClick}>
           <i className={click ? "fa fa-times" : "fa fa-bars"} />
