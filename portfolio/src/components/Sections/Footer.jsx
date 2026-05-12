@@ -13,6 +13,7 @@ function Footer() {
               className='social-icon-link twitter'
               to='/'
               target='_blank'
+              rel='noopener noreferrer'
               aria-label='LinkedIn'
             >
               <i className='fab fa-linkedin' />
