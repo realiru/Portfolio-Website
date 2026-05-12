@@ -162,7 +162,6 @@ function Navbar() {
               />
             </g>
           </svg>
-          <span className="navbar-logo-text">Hamzah Patel</span>
         </Link>
         <div className="menu-icon" onClick={handleClick}>
           <i className={click ? "fa fa-times" : "fa fa-bars"} />
