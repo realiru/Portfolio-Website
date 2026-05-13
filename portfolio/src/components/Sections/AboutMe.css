@@ -1,0 +1,16 @@
+.about-container {
+  padding: 4rem 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-container h2 {
+  font-size: 2.5rem;
+  color: #3b1f0a;
+  margin-bottom: 0.5rem;
+}
+
+.about-container p {
+  color: #6b5040;
+}
