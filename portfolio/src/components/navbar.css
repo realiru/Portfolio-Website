@@ -8,7 +8,12 @@
   position: sticky;
   top: 0;
   z-index: 999;
-  /* TODO: add scroll effect later */
+  transition: background-color 0.3s ease;
+}
+
+/* too dark, will fix */
+.navbar.scrolled {
+  background-color: rgba(0, 0, 0, 0.95);
 }
 
 .navbar-container {

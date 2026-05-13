@@ -1,12 +1,26 @@
 import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 import './Navbar.css';
 
 function Navbar() {
+  const [scrolled, setScrolled] = useState(false);
+
+  // added scroll detection
+  useEffect(() => {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    });
+    // TODO: cleanup?
+  }, []);
+
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="navbar-container">
         <Link to="/" className="navbar-logo">
-          {/* replaced text logo with the dog svg */}
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 101 101" className="navbar-logo-img">
             <path d="M49 61.46H21.48v33.42h27.49" style={{ fill: '#b36b3b' }} />
             <path d="M48.97 94.88h27.51V61.46H49" style={{ fill: '#95552f' }} />
@@ -25,10 +39,10 @@ function Navbar() {
         </Link>
 
         <ul className="nav-menu">
-          <li><Link to="/" className="nav-links">Home</Link></li>
-          <li><Link to="/" className="nav-links">About</Link></li>
-          <li><Link to="/" className="nav-links">Skills</Link></li>
-          <li><Link to="/" className="nav-links">Projects</Link></li>
+          <li className="nav-item"><Link to="/" className="nav-links">Home</Link></li>
+          <li className="nav-item"><Link to="/" className="nav-links">About</Link></li>
+          <li className="nav-item"><Link to="/" className="nav-links">Skills</Link></li>
+          <li className="nav-item"><Link to="/" className="nav-links">Projects</Link></li>
         </ul>
       </div>
     </nav>
