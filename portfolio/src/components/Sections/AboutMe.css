@@ -1,16 +1,46 @@
 .about-container {
-  padding: 4rem 2rem;
+  padding: 5rem 2rem;
   max-width: 1100px;
   margin: 0 auto;
-  text-align: center;
 }
 
 .about-container h2 {
   font-size: 2.5rem;
   color: #3b1f0a;
-  margin-bottom: 0.5rem;
+  text-align: center;
+  margin-bottom: 0.25rem;
 }
 
-.about-container p {
+.about-subtitle {
+  text-align: center;
+  color: #9b7a5a;
+  margin-bottom: 3rem;
+  font-size: 1rem;
+}
+
+/* tried flexbox, looks off - columns uneven */
+.about-content {
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+.about-img-placeholder {
+  width: 200px;
+  height: 250px;
+  background: #d4b896;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: #6b5040;
+  font-size: 0.9rem;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.about-text p {
+  color: #4a3020;
+  line-height: 1.75;
+  margin-bottom: 1rem;
+  font-size: 0.97rem;
 }
