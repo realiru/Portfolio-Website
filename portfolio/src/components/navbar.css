@@ -11,8 +11,9 @@
   transition: background-color 0.3s ease;
 }
 
+/* pulled back from 0.95, still not right but less jarring */
 .navbar.scrolled {
-  background-color: rgba(0, 0, 0, 0.95);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .navbar-container {
@@ -81,7 +82,6 @@
     left: -100%;
     background: #1a0a00;
     padding: 1rem 0;
-    /* transition isnt smooth */
     transition: left 0.5s ease;
   }
 
@@ -93,7 +93,6 @@
     height: auto;
   }
 
-  /* hamburger icon not appearing */
   .menu-icon {
     display: block;
     cursor: pointer;
@@ -101,7 +100,6 @@
     font-size: 1.8rem;
   }
 
-  /* logo jumps to center on mobile, looks weird */
   .navbar-logo {
     position: absolute;
     top: 0;
