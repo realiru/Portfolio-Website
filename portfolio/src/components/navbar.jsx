@@ -5,16 +5,18 @@ import './Navbar.css';
 function Navbar() {
   const [scrolled, setScrolled] = useState(false);
 
-  // added scroll detection
   useEffect(() => {
-    window.addEventListener('scroll', () => {
+    const onScroll = () => {
       if (window.scrollY > 50) {
         setScrolled(true);
       } else {
         setScrolled(false);
       }
-    });
-    // TODO: cleanup?
+    };
+    window.addEventListener('scroll', onScroll);
+    // was getting "Warning: Can't perform a React state update on an unmounted component"
+    // needed to add cleanup
+    return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
   return (
