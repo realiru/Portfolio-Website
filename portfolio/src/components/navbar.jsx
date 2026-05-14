@@ -1,28 +1,24 @@
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import './navbar.css';
+import './Navbar.css';
 
 function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  const [click, setClick] = useState(false);
+
+  const handleClick = () => setClick(!click);
+  const closeMobileMenu = () => setClick(false);
 
   useEffect(() => {
-    const onScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    };
-    window.addEventListener('scroll', onScroll);
-    // was getting "Warning: Can't perform a React state update on an unmounted component"
-    // needed to add cleanup
-    return () => window.removeEventListener('scroll', onScroll);
+    const handleScroll = () => setScrolled(window.scrollY > 50);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="navbar-container">
-        <Link to="/" className="navbar-logo">
+        <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 101 101" className="navbar-logo-img">
             <path d="M49 61.46H21.48v33.42h27.49" style={{ fill: '#b36b3b' }} />
             <path d="M48.97 94.88h27.51V61.46H49" style={{ fill: '#95552f' }} />
@@ -40,11 +36,15 @@ function Navbar() {
           </svg>
         </Link>
 
-        <ul className="nav-menu">
-          <li className="nav-item"><Link to="/" className="nav-links">Home</Link></li>
-          <li className="nav-item"><Link to="/" className="nav-links">About</Link></li>
-          <li className="nav-item"><Link to="/" className="nav-links">Skills</Link></li>
-          <li className="nav-item"><Link to="/" className="nav-links">Projects</Link></li>
+        <div className="menu-icon" onClick={handleClick}>
+          <i className={click ? 'fa fa-times' : 'fa fa-bars'} />
+        </div>
+
+        <ul className={click ? 'nav-menu active' : 'nav-menu'}>
+          <li className="nav-item"><Link to="/" className="nav-links" onClick={closeMobileMenu}>Home</Link></li>
+          <li className="nav-item"><Link to="/" className="nav-links" onClick={closeMobileMenu}>About</Link></li>
+          <li className="nav-item"><Link to="/" className="nav-links" onClick={closeMobileMenu}>Skills</Link></li>
+          <li className="nav-item"><Link to="/" className="nav-links" onClick={closeMobileMenu}>Projects</Link></li>
         </ul>
       </div>
     </nav>
