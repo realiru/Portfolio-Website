@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import './Navbar.css';
+import './navbar.css';
 
 function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -11,8 +11,19 @@ function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
+
+    // clicking outside the nav now closes the mobile menu
+    const handleOutsideClick = (e) => {
+      if (!e.target.closest('.navbar-container')) setClick(false);
+    };
+
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    document.addEventListener('click', handleOutsideClick);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      document.removeEventListener('click', handleOutsideClick);
+    };
   }, []);
 
   return (
