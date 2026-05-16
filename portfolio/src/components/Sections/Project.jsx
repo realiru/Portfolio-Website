@@ -1,4 +1,4 @@
-import './Projects.css';
+import './Project.css';
 
 // TODO replace with actual project data!!
 const projects = [
