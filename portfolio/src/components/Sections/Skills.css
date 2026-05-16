@@ -17,44 +17,52 @@
   margin-bottom: 3rem;
 }
 
-/* just a flex row of lists for now, will convert to grid */
-.skills-list {
-  display: flex;
-  gap: 2rem;
-  flex-wrap: wrap;
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
 }
 
-.skills-category {
-  min-width: 180px;
+.skill-card {
   background: #fff9f3;
   border: 1px solid #d4b896;
-  border-radius: 8px;
-  padding: 1.25rem;
+  border-radius: 12px;
+  padding: 1.5rem;
 }
 
-.skills-category h3 {
+.skill-card h3 {
   font-size: 1rem;
   color: #5d3a1a;
-  margin-bottom: 0.75rem;
-  border-bottom: 1px solid #ebd9c8;
+  margin-bottom: 1rem;
   padding-bottom: 0.5rem;
+  border-bottom: 1px solid #ebd9c8;
 }
 
-.skills-category ul {
+.skill-card ul {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 0.4rem;
+  gap: 0.5rem;
 }
 
-.skills-category li {
+.skill-card li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   font-size: 0.9rem;
   color: #4a3020;
-  padding-left: 0.5rem;
 }
 
-.skills-category li::before {
-  content: '•';
-  color: #b36b3b;
-  margin-right: 0.4rem;
+.skill-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #b36b3b;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
