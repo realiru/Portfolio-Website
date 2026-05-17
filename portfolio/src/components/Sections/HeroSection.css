@@ -6,64 +6,97 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* dark overlay so text is readable */
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.25);
-  object-fit: contain;
   margin-top: -80px;
   padding-top: 80px;
   text-align: center;
 }
 
+.hero-pre {
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 0.5rem;
+  min-height: 2rem;
+}
+
+.hero-pre span {
+  color: rgba(255, 255, 255, 0.95);
+}
+
 .hero-container h1 {
-  font-size: 100px;
+  font-size: clamp(3rem, 8vw, 6rem);
   color: #fff;
-  margin-top: -100px;
+  line-height: 1.05;
+  margin-bottom: 0.5rem;
+  font-family: 'Playfair Display', 'Georgia', serif;
 }
 
-.hero-name {
+.hero-cursor {
   color: #b36b3b;
+  animation: blink 1s step-end infinite;
 }
 
-.hero-sub {
-  font-size: 28px;
-  color: #fff;
-  margin-top: 8px;
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
 }
 
-.hero-btns {
-  margin-top: 2rem;
+.hero-degree {
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 0.95rem;
+  margin-bottom: 1.75rem;
 }
 
-/* button styles -- will probably move these to a separate file */
-.btn {
-  display: inline-block;
-  padding: 0.75rem 2rem;
-  border-radius: 4px;
-  text-decoration: none;
-  font-size: 1rem;
-  cursor: pointer;
-  border: none;
+.hero-social {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
 }
 
-.btn--primary {
-  background: #5d3a1a;
-  color: #fff;
-}
-
-.btn--primary:hover {
-  background: #3b1f0a;
-}
-
-.btn--large {
+.hero-social a {
+  color: rgba(255, 255, 255, 0.85);
   font-size: 1.1rem;
-  padding: 0.9rem 2.5rem;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.hero-social a:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.hero-resume-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: #fff;
+  text-decoration: none;
+  padding: 0.6rem 1.5rem;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  backdrop-filter: blur(4px);
+  transition: all 0.2s;
+}
+
+.hero-resume-btn:hover {
+  background: rgba(255, 255, 255, 0.22);
 }
 
 @media screen and (max-width: 768px) {
   .hero-container h1 {
-    font-size: 50px;
+    font-size: 3rem;
   }
-  .hero-sub {
-    font-size: 20px;
+  .hero-pre {
+    font-size: 1rem;
   }
 }
