@@ -1,0 +1,81 @@
+.work-container {
+  padding: 5rem 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.work-container h2 {
+  font-size: 2.5rem;
+  color: #3b1f0a;
+  text-align: center;
+  margin-bottom: 0.25rem;
+}
+
+.work-subtitle {
+  text-align: center;
+  color: #9b7a5a;
+  margin-bottom: 3rem;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: #d4b896;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -2.375rem;
+  top: 6px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #b36b3b;
+  border: 2px solid #f5efe6;
+}
+
+.timeline-date {
+  font-size: 0.8rem;
+  color: #b36b3b;
+  font-weight: 500;
+  margin-bottom: 0.2rem;
+}
+
+.timeline-role {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #3b1f0a;
+  margin-bottom: 0.1rem;
+}
+
+.timeline-company {
+  font-size: 0.9rem;
+  color: #6b5040;
+  margin-bottom: 0.6rem;
+}
+
+.timeline-desc {
+  list-style: disc;
+  padding-left: 1.2rem;
+}
+
+.timeline-desc li {
+  font-size: 0.88rem;
+  color: #6b5040;
+  line-height: 1.7;
+  margin-bottom: 0.2rem;
+}
