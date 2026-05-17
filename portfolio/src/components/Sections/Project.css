@@ -70,6 +70,27 @@
   margin-bottom: 1rem;
 }
 
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.65rem;
+  border-radius: 999px;
+  background: #f4e3d1;
+  border: 1px solid #d4b896;
+  color: #5d3a1a;
+  font-size: 0.76rem;
+  font-weight: 600;
+  line-height: 1;
+  white-space: nowrap;
+}
+
 .project-links {
   display: flex;
   gap: 0.75rem;
@@ -93,5 +114,13 @@
 @media (max-width: 768px) {
   .projects-grid {
     grid-template-columns: 1fr;
+  }
+
+  .project-tags {
+    gap: 0.4rem;
+  }
+
+  .tag {
+    font-size: 0.72rem;
   }
 }

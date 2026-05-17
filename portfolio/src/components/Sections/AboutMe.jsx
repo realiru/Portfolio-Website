@@ -20,8 +20,7 @@ function AboutMe() {
           <p>
             I've worked on projects spanning full-stack development, cloud
             technologies, and cybersecurity - including a UV exposure tracking
-            app
-            nominated for the Largest Community Impact Award.
+            app nominated for the Largest Community Impact Award.
           </p>
           <p>
             Proficient in Python, Java, JavaScript, ReactJS, SQL, and Agile
@@ -29,9 +28,9 @@ function AboutMe() {
             automating workflows for real-world impact.
           </p>
           <p>
-            Outside of coding, I'm curious by nature, always exploring new tools
-            and technologies, and I enjoy bouldering, motorbikes, and continuous
-            learning.
+            Outside of coding, I'm curious by nature, always exploring new
+            tools and technologies. I enjoy bouldering, motorbikes, and
+            continuous learning.
           </p>
 
           <div className="about-facts">
