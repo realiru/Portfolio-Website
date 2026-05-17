@@ -4,59 +4,102 @@
   margin: 0 auto;
 }
 
+.section-label {
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #b36b3b;
+  margin-bottom: 0.4rem;
+}
+
 .about-container h2 {
-  font-size: 2.5rem;
+  font-size: clamp(2rem, 4vw, 2.8rem);
   color: #3b1f0a;
-  text-align: center;
-  margin-bottom: 0.25rem;
+  margin-bottom: 2.5rem;
+  font-family: 'Playfair Display', 'Georgia', serif;
 }
 
-.about-subtitle {
-  text-align: center;
-  color: #9b7a5a;
-  margin-bottom: 3rem;
-  font-size: 1rem;
+.about-grid {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 4rem;
+  align-items: start;
 }
 
-/* tried flexbox, looks off - columns uneven */
-.about-content {
-  display: flex;
-  gap: 3rem;
-  align-items: flex-start;
+.about-photo-wrapper {
+  position: relative;
 }
 
-.about-img-placeholder {
-  width: 200px;
-  height: 250px;
-  background: #d4b896;
+.about-photo-wrapper::after {
+  content: '';
+  position: absolute;
+  inset: 12px -12px -12px 12px;
+  border: 2px solid #d4b896;
+  border-radius: 12px;
+  z-index: -1;
+}
+
+.about-photo-placeholder {
+  width: 260px;
+  height: 310px;
+  background: #ebd9c8;
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #6b5040;
-  font-size: 0.9rem;
-  border-radius: 8px;
-  flex-shrink: 0;
+  font-size: 1.5rem;
+  color: #9b7a5a;
+  font-weight: 600;
 }
 
-.about-photo {
-  width: 260px;
-  height: 310px;
-  object-fit: cover;
-  object-position: top;
-}
-
-@media (max-width: 768px) {
-  .about-photo {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    object-position: top;
-  }
+.about-text {
+  /* no additional layout rules needed here */
 }
 
 .about-text p {
   color: #4a3020;
-  line-height: 1.75;
+  line-height: 1.8;
   margin-bottom: 1rem;
   font-size: 0.97rem;
+}
+
+.about-facts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.about-fact {
+  background: #fff9f3;
+  border: 1px solid #d4b896;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.about-fact strong {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: #b36b3b;
+  text-transform: uppercase;
+}
+
+.about-fact span {
+  font-size: 0.88rem;
+  color: #4a3020;
+}
+
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-photo-wrapper {
+    display: none;
+  }
 }
