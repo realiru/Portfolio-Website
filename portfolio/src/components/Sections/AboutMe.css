@@ -38,6 +38,22 @@
   flex-shrink: 0;
 }
 
+.about-photo {
+  width: 260px;
+  height: 310px;
+  object-fit: cover;
+  object-position: top;
+}
+
+@media (max-width: 768px) {
+  .about-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-position: top;
+  }
+}
+
 .about-text p {
   color: #4a3020;
   line-height: 1.75;

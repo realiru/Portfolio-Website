@@ -68,7 +68,26 @@
   transition: all 0.2s ease-out;
 }
 
-.fa-bars {
+.nav-contact-btn {
+  background: #b36b3b;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.45rem 1.25rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+
+.nav-contact-btn:hover {
+  background: #5d3a1a;
+}
+
+.fa-bars, .fa-times {
   color: #fff;
 }
 
@@ -144,5 +163,9 @@
   .fa-times {
     color: #fff;
     font-size: 2rem;
+  }
+
+  .nav-contact-btn {
+    display: none;
   }
 }

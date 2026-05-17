@@ -19,7 +19,7 @@ const jobs = [
     company: 'Spark NZ',
     points: [
       'Provided technical guidance to customers with optimal, tailored solutions.',
-      'Translated complex technical concepts into customer-friendly explanations — led to 30% increase in satisfaction.',
+      'Translated complex technical concepts into customer-friendly explanations, led to 30% increase in satisfaction.',
       'Shadowed data scientists and engineers, expanding knowledge of analytics and network security.',
     ],
   },

@@ -7,8 +7,11 @@ function AboutMe() {
       <p className="about-subtitle">Who I am and what I do</p>
 
       <div className="about-content">
-        {/* image placeholder - need to add actual photo later */}
-        <div className="about-img-placeholder">Photo</div>
+        <img
+          className="about-photo"
+          src="../../images/profile.png"
+          alt="Profile"
+        />
 
         <div className="about-text">
           <p>
