@@ -1,27 +1,33 @@
 import './Project.css';
 
-// TODO replace with actual project data!!
+// replaced dummy data with real projects
 const projects = [
   {
     id: 1,
-    title: 'Project Name',
-    description: 'Explore the hidden waterfall deep inside the Amazon Jungle',
-    label: 'Adventure',
-    image: '/images/img-9.jpg',
+    emoji: '☀️',
+    title: 'UV Exposure Tracker',
+    description:
+      'Capstone project: A React Native Android app to monitor sun exposure. Implemented custom JWT authentication after discovering the original Expo library was deprecated. Nominated for Largest Community Impact Award.',
+    github: 'https://github.com/realiru',
+    live: null,
   },
   {
     id: 2,
-    title: 'Project Name',
-    description: 'Explore the hidden waterfall deep inside the Amazon Jungle',
-    label: 'Adventure',
-    image: '/images/img-2.jpg',
+    emoji: '📋',
+    title: 'Form Data Automation',
+    description:
+      'Freelance: Rebuilt a client\'s Squarespace form in HTML/CSS, added JavaScript validation and regex checks, and integrated Zapier webhooks to automate secure data transfer into Google Drive and Sheets.',
+    github: null,
+    live: null,
   },
   {
     id: 3,
-    title: 'Project Name',
-    description: 'Some description here',
-    label: 'Label',
-    image: '/images/img-1.jpg',
+    emoji: '🍓',
+    title: 'Network-wide DNS Filter',
+    description:
+      'Deployed Pi-hole on a Raspberry Pi 3B for network-wide ad and DNS filtering. Configured via SSH and Linux CLI. Gained hands-on experience with networking and system administration.',
+    github: 'https://github.com/realiru',
+    live: null,
   },
 ];
 
@@ -35,15 +41,19 @@ function Projects() {
         {projects.map((project) => (
           <div key={project.id} className="project-card">
             <div className="project-thumb">
-              <img src={project.image} alt={project.title} />
+              <span className="project-emoji">{project.emoji}</span>
             </div>
             <div className="project-info">
-              <span className="project-label">{project.label}</span>
               <h3>{project.title}</h3>
               <p>{project.description}</p>
+              {/* TODO: add tags */}
               <div className="project-links">
-                <a href="#">GitHub</a>
-                <a href="#">Live</a>
+                {project.github && (
+                  <a href={project.github} target="_blank" rel="noopener noreferrer">GitHub</a>
+                )}
+                {project.live && (
+                  <a href={project.live} target="_blank" rel="noopener noreferrer">Live</a>
+                )}
               </div>
             </div>
           </div>

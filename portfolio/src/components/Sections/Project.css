@@ -40,31 +40,20 @@
 .project-thumb {
   height: 160px;
   background: #ebd9c8;
-  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.project-thumb img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.project-emoji {
+  font-size: 3rem;
 }
 
 .project-info {
   padding: 1.25rem;
-  flex: 1;
   display: flex;
   flex-direction: column;
-}
-
-.project-label {
-  display: inline-block;
-  background: #ebd9c8;
-  color: #5d3a1a;
-  font-size: 0.75rem;
-  font-weight: 600;
-  padding: 0.2rem 0.6rem;
-  border-radius: 4px;
-  margin-bottom: 0.5rem;
+  flex: 1;
 }
 
 .project-info h3 {
