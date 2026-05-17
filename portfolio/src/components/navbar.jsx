@@ -22,7 +22,7 @@ function Navbar() {
     };
   }, []);
 
-  // dog eye tracking
+  // meerkat eye tracking
   useEffect(() => {
     const leftEye = document.getElementById('left-eye');
     const rightEye = document.getElementById('right-eye');
