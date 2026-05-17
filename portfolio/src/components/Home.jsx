@@ -3,8 +3,8 @@ import AboutMe from './Sections/AboutMe.jsx';
 import Skills from './Sections/Skills.jsx';
 import Projects from './Sections/Projects.jsx';
 import WorkExperience from './Sections/WorkExperience.jsx';
+import Footer from './Sections/Footer.jsx';
 
-// footer still todo
 function Home() {
   return (
     <>
@@ -13,6 +13,7 @@ function Home() {
       <Skills />
       <WorkExperience />
       <Projects />
+      <Footer />
     </>
   );
 }

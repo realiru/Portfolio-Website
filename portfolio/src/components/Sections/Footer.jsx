@@ -1,27 +1,20 @@
-import React from 'react';
 import './Footer.css';
-import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
-    <div className='footer-container'>
-      <section className='social-media'>
-        <div className='social-media-wrap'>
-          <small className='website-rights'>TRVL © 2020</small>
-          <div className='social-icons'>
-            <Link
-              className='social-icon-link twitter'
-              to='/'
-              target='_blank'
-              rel='noopener noreferrer'
-              aria-label='LinkedIn'
-            >
-              <i className='fab fa-linkedin' />
-            </Link>
-          </div>
+    <footer className="footer">
+      <div className="footer-inner">
+        <p>
+          Built by <strong>Hamzah Patel</strong> &nbsp;·&nbsp;
+          <a href="mailto:hamzahpatel403@gmail.com">hamzahpatel403@gmail.com</a>
+          &nbsp;·&nbsp; © 2025
+        </p>
+        <div className="footer-links">
+          <a href="https://github.com/realiru" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://linkedin.com/in/hamzahpatel" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         </div>
-      </section>
-    </div>
+      </div>
+    </footer>
   );
 }
 
