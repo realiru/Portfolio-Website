@@ -6,20 +6,23 @@ const projects = [
     emoji: '☀️',
     title: 'UV Exposure Tracker',
     description:
-      'Capstone project - a React Native Android app to monitor sun exposure. Implemented custom JWT authentication after discovering the original Expo library was deprecated. Nominated for Largest Community Impact Award.',
+      'Capstone project — a React Native Android app to monitor sun exposure. Implemented custom JWT authentication after discovering the original Expo library was deprecated. Nominated for Largest Community Impact Award.',
     tags: ['React Native', 'JWT', 'TypeScript'],
-    github: 'https://github.com/realiru',
-    live: null,
+    links: [
+      {
+        label: 'GitHub',
+        href: 'https://github.com/uoa-compsci399-s1-2024/capstone-project-2024-s1-team-7-noot-noot',
+      },
+    ],
   },
   {
     id: 2,
     emoji: '📋',
     title: 'Form Data Automation',
     description:
-      'Freelance - rebuilt a client\'s Squarespace form in HTML/CSS, added JavaScript validation and regex checks, and integrated Zapier webhooks to automate secure data transfer into Google Drive and Sheets.',
+      "Freelance — rebuilt a client's Squarespace form in HTML/CSS, added JavaScript validation and regex checks, and integrated Zapier webhooks to automate secure data transfer into Google Drive and Sheets.",
     tags: ['JavaScript', 'Zapier', 'HTML/CSS'],
-    github: null,
-    live: null,
+    links: [],
   },
   {
     id: 3,
@@ -28,14 +31,13 @@ const projects = [
     description:
       'Deployed Pi-hole on a Raspberry Pi 3B for network-wide ad and DNS filtering. Configured via SSH and Linux CLI. Gained hands-on experience with networking and system administration.',
     tags: ['Linux', 'Raspberry Pi', 'Networking'],
-    github: 'https://github.com/realiru',
-    live: null,
+    links: [],
   },
 ];
 
 function Projects() {
   return (
-    <div className="projects-container">
+    <div className="projects-container" id="projects">
       <h2>Projects</h2>
       <p className="projects-subtitle">Check out my work</p>
 
@@ -54,12 +56,11 @@ function Projects() {
                 ))}
               </div>
               <div className="project-links">
-                {project.github && (
-                  <a href={project.github} target="_blank" rel="noopener noreferrer">GitHub</a>
-                )}
-                {project.live && (
-                  <a href={project.live} target="_blank" rel="noopener noreferrer">Live</a>
-                )}
+                {project.links.map((link) => (
+                  <a key={link.label} href={link.href} target="_blank" rel="noopener noreferrer">
+                    {link.label}
+                  </a>
+                ))}
               </div>
             </div>
           </div>

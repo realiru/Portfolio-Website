@@ -1,5 +1,7 @@
 import { useEffect, useRef } from 'react';
 import Typed from 'typed.js';
+import { MdEmail } from 'react-icons/md';
+import { FaGithub, FaLinkedinIn, FaDownload } from 'react-icons/fa';
 import './HeroSection.css';
 
 function HeroSection() {
@@ -23,7 +25,7 @@ function HeroSection() {
   }, []);
 
   return (
-    <div className="hero-container">
+    <div className="hero-container" id="hero">
       <p className="hero-pre">
         I'm <span ref={typedRef}></span>
       </p>
@@ -34,18 +36,18 @@ function HeroSection() {
 
       <div className="hero-social">
         <a href="mailto:hamzahpatel403@gmail.com" aria-label="Email">
-          <i className="fa fa-envelope" />
+          <MdEmail />
         </a>
         <a href="https://github.com/realiru" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-          <i className="fab fa-github" />
+          <FaGithub />
         </a>
         <a href="https://linkedin.com/in/hamzahpatel" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-          <i className="fab fa-linkedin-in" />
+          <FaLinkedinIn />
         </a>
       </div>
 
-      <a href="/resume.pdf" download className="hero-resume-btn">
-        <i className="fa fa-download" /> Resume
+      <a href="/Hamzah CV.pdf" download className="hero-resume-btn">
+        <FaDownload /> Resume
       </a>
     </div>
   );

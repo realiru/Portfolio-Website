@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import { FaBars, FaTimes } from 'react-icons/fa';
+import { MdEmail } from 'react-icons/md';
 import './navbar.css';
 
 function Navbar() {
@@ -8,6 +10,16 @@ function Navbar() {
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
+
+  const scrollToSection = (id) => {
+    closeMobileMenu();
+    const el = document.getElementById(id);
+    if (el) {
+      const offset = 80;
+      const top = el.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top, behavior: 'smooth' });
+    }
+  };
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -22,7 +34,6 @@ function Navbar() {
     };
   }, []);
 
-  // meerkat eye tracking
   useEffect(() => {
     const leftEye = document.getElementById('left-eye');
     const rightEye = document.getElementById('right-eye');
@@ -62,7 +73,7 @@ function Navbar() {
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="navbar-container">
-        <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
+        <Link to="/" className="navbar-logo" onClick={() => scrollToSection('hero')}>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 101 101" className="navbar-logo-img">
             <path d="M49 61.46H21.48v33.42h27.49" style={{ fill: '#b36b3b' }} />
             <path d="M48.97 94.88h27.51V61.46H49" style={{ fill: '#95552f' }} />
@@ -81,18 +92,26 @@ function Navbar() {
         </Link>
 
         <div className="menu-icon" onClick={handleClick}>
-          <i className={click ? 'fa fa-times' : 'fa fa-bars'} />
+          {click ? <FaTimes /> : <FaBars />}
         </div>
 
         <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-          <li className="nav-item"><Link to="/" className="nav-links" onClick={closeMobileMenu}>Home</Link></li>
-          <li className="nav-item"><Link to="/" className="nav-links" onClick={closeMobileMenu}>About</Link></li>
-          <li className="nav-item"><Link to="/" className="nav-links" onClick={closeMobileMenu}>Skills</Link></li>
-          <li className="nav-item"><Link to="/" className="nav-links" onClick={closeMobileMenu}>Projects</Link></li>
+          <li className="nav-item">
+            <button className="nav-links" onClick={() => scrollToSection('hero')}>Home</button>
+          </li>
+          <li className="nav-item">
+            <button className="nav-links" onClick={() => scrollToSection('about')}>About</button>
+          </li>
+          <li className="nav-item">
+            <button className="nav-links" onClick={() => scrollToSection('skills')}>Skills</button>
+          </li>
+          <li className="nav-item">
+            <button className="nav-links" onClick={() => scrollToSection('projects')}>Projects</button>
+          </li>
         </ul>
 
         <a href="mailto:hamzahpatel403@gmail.com" className="nav-contact-btn">
-          Contact Me <i className="fa fa-user" />
+          Contact Me <MdEmail />
         </a>
       </div>
     </nav>
