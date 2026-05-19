@@ -17,10 +17,16 @@
   margin-bottom: 3rem;
 }
 
+/* 4 cards: first row 3, second row 1 centred */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
+}
+
+/* 4th card centres itself in the last row */
+.project-card:last-child:nth-child(3n + 1) {
+  grid-column: 2 / 3;
 }
 
 .project-card {
@@ -30,11 +36,12 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  transition: transform 0.2s;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .project-card:hover {
   transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(93, 58, 26, 0.1);
 }
 
 .project-thumb {
@@ -111,9 +118,19 @@
   background: #ebd9c8;
 }
 
+/* ── Mobile ── */
 @media (max-width: 768px) {
+  .projects-container {
+    padding: 3rem 1.25rem;
+  }
+
   .projects-grid {
     grid-template-columns: 1fr;
+  }
+
+  /* reset centering trick on mobile */
+  .project-card:last-child:nth-child(3n + 1) {
+    grid-column: auto;
   }
 
   .project-tags {

@@ -14,23 +14,23 @@ const jobs = [
   },
   {
     id: 2,
-    date: 'Apr 2023 – Nov 2024',
-    role: 'Customer Advisor',
-    company: 'Spark NZ',
-    points: [
-      'Provided technical guidance to customers with optimal, tailored solutions.',
-      'Translated complex technical concepts into customer-friendly explanations, led to 30% increase in satisfaction.',
-      'Shadowed data scientists and engineers, expanding knowledge of analytics and network security.',
-    ],
-  },
-  {
-    id: 3,
-    date: 'May – Jul 2025',
+    date: 'May 2025 – Jul 2025',
     role: 'Sales Representative (Contract)',
     company: 'Insight Marketing',
     points: [
       'Exceeded fundraising targets in week two by adapting quickly to new audiences.',
       'Developed persuasion, negotiation, and public speaking skills.',
+    ],
+  },
+  {
+  id: 3,
+  date: 'Apr 2023 – Nov 2024',
+  role: 'Customer Advisor',
+  company: 'Spark NZ',
+  points: [
+    'Provided technical guidance to customers with optimal, tailored solutions.',
+    'Translated complex technical concepts into customer-friendly explanations, led to 30% increase in satisfaction.',
+    'Shadowed data scientists and engineers, expanding knowledge of analytics and network security.',
     ],
   },
   {

@@ -6,8 +6,8 @@ function AboutMe() {
 
   return (
     <div className="about-container" id="about">
-      <p className="section-label">Who I am</p>
       <h2>About Me</h2>
+      <p className="section-label">Who I am</p>
 
       <div className="about-grid">
         <div className="about-photo-wrapper">

@@ -7,8 +7,13 @@ import './navbar.css';
 function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [click, setClick] = useState(false);
+  const [showTooltip, setShowTooltip] = useState(false);
 
   const handleClick = () => setClick(!click);
+  const handleMenuIconClick = (e) => {
+    e.stopPropagation();
+    handleClick();
+  };
   const closeMobileMenu = () => setClick(false);
 
   const scrollToSection = (id) => {
@@ -34,6 +39,13 @@ function Navbar() {
     };
   }, []);
 
+  // show tooltip on first load and hide after 5 seconds
+  useEffect(() => {
+    setShowTooltip(true);
+    const timer = setTimeout(() => setShowTooltip(false), 5000);
+    return () => clearTimeout(timer);
+  }, []);
+
   useEffect(() => {
     const leftEye = document.getElementById('left-eye');
     const rightEye = document.getElementById('right-eye');
@@ -49,17 +61,17 @@ function Navbar() {
       const angle = Math.atan2(e.clientY - cy, e.clientX - cx);
 
       const moveEye = (eye, ox, oy) => {
-        eye.setAttribute('cx', ox + Math.cos(angle) * 2);
-        eye.setAttribute('cy', oy + Math.sin(angle) * 4);
+        eye.setAttribute('cx', ox + Math.cos(angle) * 2.8);
+        eye.setAttribute('cy', oy + Math.sin(angle) * 5.2);
       };
 
       moveEye(leftEye, 65.22, 34.75);
       moveEye(rightEye, 33.28, 34.75);
 
       if (window.innerWidth > 960) {
-        const tx = Math.max(-2, Math.min(2, (e.clientX - cx) / 250));
-        const ty = Math.max(-2, Math.min(0, (e.clientY - cy) / 250));
-        const rot = Math.max(-3, Math.min(0, Math.atan2(e.clientY - cy, e.clientX - cx) * (180 / Math.PI) / 10));
+        const tx = Math.max(-3, Math.min(3, (e.clientX - cx) / 180));
+        const ty = Math.max(-3, Math.min(1, (e.clientY - cy) / 180));
+        const rot = Math.max(-6, Math.min(2, Math.atan2(e.clientY - cy, e.clientX - cx) * (180 / Math.PI) / 8));
         const nx = nose.getAttribute('cx');
         const ny = nose.getAttribute('cy');
         faceGroup.setAttribute('transform', `translate(${tx}, ${ty}) rotate(${rot}, ${nx}, ${ny})`);
@@ -89,9 +101,10 @@ function Navbar() {
               <circle id="nose" cx="48.97" cy="57.44" r="5.83" style={{ fill: '#401900' }} />
             </g>
           </svg>
+          {showTooltip && <div className="logo-tooltip">Show me where to look</div>}
         </Link>
 
-        <div className="menu-icon" onClick={handleClick}>
+        <div className="menu-icon" onClick={handleMenuIconClick}>
           {click ? <FaTimes /> : <FaBars />}
         </div>
 

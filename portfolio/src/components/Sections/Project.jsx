@@ -6,23 +6,20 @@ const projects = [
     emoji: '☀️',
     title: 'UV Exposure Tracker',
     description:
-      'Capstone project — a React Native Android app to monitor sun exposure. Implemented custom JWT authentication after discovering the original Expo library was deprecated. Nominated for Largest Community Impact Award.',
+      'Capstone project: A React Native Android app to monitor sun exposure. Implemented custom JWT authentication after discovering the original Expo library was deprecated. Nominated for Largest Community Impact Award.',
     tags: ['React Native', 'JWT', 'TypeScript'],
-    links: [
-      {
-        label: 'GitHub',
-        href: 'https://github.com/uoa-compsci399-s1-2024/capstone-project-2024-s1-team-7-noot-noot',
-      },
-    ],
+    github: 'https://github.com/realiru',
+    live: null,
   },
   {
     id: 2,
     emoji: '📋',
     title: 'Form Data Automation',
     description:
-      "Freelance — rebuilt a client's Squarespace form in HTML/CSS, added JavaScript validation and regex checks, and integrated Zapier webhooks to automate secure data transfer into Google Drive and Sheets.",
+      "Freelance: Rebuilt a client's Squarespace form in HTML/CSS, added JavaScript validation and regex checks, and integrated Zapier webhooks to automate secure data transfer into Google Drive and Sheets.",
     tags: ['JavaScript', 'Zapier', 'HTML/CSS'],
-    links: [],
+    github: null,
+    live: null,
   },
   {
     id: 3,
@@ -31,7 +28,18 @@ const projects = [
     description:
       'Deployed Pi-hole on a Raspberry Pi 3B for network-wide ad and DNS filtering. Configured via SSH and Linux CLI. Gained hands-on experience with networking and system administration.',
     tags: ['Linux', 'Raspberry Pi', 'Networking'],
-    links: [],
+    github: 'https://github.com/realiru',
+    live: null,
+  },
+  {
+    id: 4,
+    emoji: '💍',
+    title: 'Divaria',
+    description:
+      'Freelance: Custom landing page built from scratch for a NZ vintage and antique jewellery business. No templates or CMS. Designed and developed the full site to drive traffic to their Trade Me storefront. Self-hosted on AWS Lightsail, handling domain configuration, server provisioning, and deployment end to end.',
+    tags: ['React', 'JavaScript', 'CSS', 'AWS Lightsail'],
+    github: 'https://github.com/realiru/Divaria',
+    live: 'https://divaria.co.nz',
   },
 ];
 
@@ -56,11 +64,12 @@ function Projects() {
                 ))}
               </div>
               <div className="project-links">
-                {project.links.map((link) => (
-                  <a key={link.label} href={link.href} target="_blank" rel="noopener noreferrer">
-                    {link.label}
-                  </a>
-                ))}
+                {project.github && (
+                  <a href={project.github} target="_blank" rel="noopener noreferrer">GitHub</a>
+                )}
+                {project.live && (
+                  <a href={project.live} target="_blank" rel="noopener noreferrer">Live Site</a>
+                )}
               </div>
             </div>
           </div>

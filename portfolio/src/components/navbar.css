@@ -37,6 +37,7 @@
   font-size: 2rem;
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .nav-menu {
@@ -176,4 +177,29 @@
   .nav-contact-btn {
     display: none;
   }
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translate(-50%, -6px); }
+  10% { opacity: 1; transform: translate(-50%, 0); }
+  90% { opacity: 1; transform: translate(-50%, 0); }
+  100% { opacity: 0; transform: translate(-50%, -6px); }
+}
+
+.logo-tooltip {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 50%;
+  transform: translate(-50%, 0);
+  background-color: rgba(255, 255, 255, 0.95);
+  color: #242424;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  white-space: nowrap;
+  pointer-events: none;
+  animation: fadeInOut 5s ease-in-out;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  z-index: 2;
 }
