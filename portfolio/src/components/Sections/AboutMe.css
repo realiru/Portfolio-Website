@@ -134,6 +134,7 @@
     width: 100px;
     height: 100px;
     border-radius: 50%;
+    object-position: 0 110%;
   }
 
   .about-photo-placeholder {

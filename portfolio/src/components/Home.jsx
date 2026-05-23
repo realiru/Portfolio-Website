@@ -19,7 +19,7 @@ function Home() {
           }
         });
       },
-      { threshold: 0.5 }
+      { threshold: 0.3 }
     );
 
     document.querySelectorAll('.section').forEach((el) => {
