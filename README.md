@@ -1,6 +1,6 @@
-# Hamzah Patel — Portfolio Website
+# Hamzah Patel - Portfolio Website
 
-Personal portfolio site built with React and Vite. Showcases projects, work experience, education, and skills — targeted at IT support and cyber security roles in New Zealand.
+Personal portfolio site built with React and Vite. Showcases projects, work experience, education, and skills - targeted at IT support and cyber security roles in New Zealand.
 
 **Live:** [hamzahpatel.dev](https://hamzahpatel.dev)  
 **Repo:** [github.com/realiru/Portfolio-Website](https://github.com/realiru/Portfolio-Website)
@@ -15,9 +15,9 @@ Personal portfolio site built with React and Vite. Showcases projects, work expe
 | Routing | react-router-dom v6 |
 | Animations | typed.js · IntersectionObserver + CSS transitions |
 | Icons | Font Awesome 6.5 (CDN) |
-| Fonts | Google Fonts — Playfair Display, DM Sans |
+| Fonts | Google Fonts - Playfair Display, DM Sans |
 | Styling | Plain CSS (per-component) |
-| Hosting | Vercel — auto-deploys on push to `main` |
+| Hosting | Vercel - auto-deploys on push to `main` |
 
 ---
 
@@ -55,7 +55,7 @@ npm run preview
 portfolio/
 ├── public/
 │   ├── hamzah.png              # Profile photo (transparent bg)
-│   ├── Hamzah_Patel_CV.pdf     # Resume — downloaded via hero button
+│   ├── Hamzah_Patel_CV.pdf     # Resume - downloaded via hero button
 │   └── images/
 │       └── background.jpg      # Hero section background
 ├── src/
@@ -92,13 +92,13 @@ portfolio/
 
 ## Features
 
-- **Meerkat eye tracking** — SVG logo eyes follow the cursor. A tooltip fades in on page load to draw attention to it
-- **Scroll animations** — project cards pop in, timeline items slide in from left — both powered by IntersectionObserver, fire once on entry
-- **Typed.js subtitle** — rotating strings in the hero
-- **Frosted glass navbar** — transparent over hero, blurs on scroll
-- **Responsive** — single column on mobile, multi-column on desktop
-- **Read More toggle** — About section collapses to 2 paragraphs on mobile
-- **Resume download** — links to `/Hamzah_Patel_CV.pdf` in `public/`
+- **Meerkat eye tracking** - SVG logo eyes follow the cursor. A tooltip fades in on page load to draw attention to it
+- **Scroll animations** - project cards pop in, timeline items slide in from left - both powered by IntersectionObserver, fire once on entry
+- **Typed.js subtitle** - rotating strings in the hero
+- **Frosted glass navbar** - transparent over hero, blurs on scroll
+- **Responsive** - single column on mobile, multi-column on desktop
+- **Read More toggle** - About section collapses to 2 paragraphs on mobile
+- **Resume download** - links to `/Hamzah_Patel_CV.pdf` in `public/`
 
 ---
 
@@ -106,15 +106,15 @@ portfolio/
 
 | Bug | Details | Status |
 |---|---|---|
-| Scroll animations preload on mobile | IntersectionObserver fires too early on mobile — some sections are already visible when the page loads so they animate in without scrolling, or not at all | Open |
+| Scroll animations preload on mobile | IntersectionObserver fires too early on mobile - some sections are already visible when the page loads so they animate in without scrolling, or not at all | Open |
 | Hamburger menu trailing text | When the mobile menu closes, brief ghost text appears next to the hamburger icon before it fully clears | Open |
-| Not responsive at 4K | Layout breaks at very high resolutions (2560px+) without manually zooming in — `max-width` containers need scaling for ultrawide/4K screens | Open |
+| Not responsive at 4K | Layout breaks at very high resolutions (2560px+) without manually zooming in - `max-width` containers need scaling for ultrawide/4K screens | Open |
 
 ---
 
 ## Deployment
 
-Hosted on **Vercel**. Connected to the `main` branch — every push auto-deploys.
+Hosted on **Vercel**. Connected to the `main` branch - every push auto-deploys.
 
 Manual redeploy:
 1. Go to [vercel.com](https://vercel.com) → your project
@@ -130,7 +130,7 @@ Manual redeploy:
 
 ## Updating Content
 
-All content lives directly in the component files — no CMS or external data source.
+All content lives directly in the component files - no CMS or external data source.
 
 | What to update | File |
 |---|---|
