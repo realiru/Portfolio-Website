@@ -46,12 +46,8 @@ function HeroSection() {
         </a>
       </div>
 
-      <a href="/Hamzah_Patel_CV.pdf" download className="hero-resume-btn">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
-          <path d="M12 3V15" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-          <path d="M7 10L12 15L17 10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-          <path d="M21 21H3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-        </svg>
+      <a href="/Hamzah CV.pdf" download className="hero-resume-btn">
+        <FaDownload />
         Resume
       </a>
     </div>
