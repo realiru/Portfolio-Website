@@ -10,18 +10,22 @@ const skillData = [
     items: ['React JS', 'React Native', '.NET Core', 'Tailwind CSS'],
   },
   {
+    category: 'Cloud & Infrastructure',
+    items: ['AWS Lightsail', 'Linux', 'SSH', 'DNS', 'Raspberry Pi', 'Network Security'],
+  },
+  {
     category: 'Databases',
     items: ['MySQL', 'SQL'],
   },
   {
     category: 'Tools',
-    items: ['GitHub / Git', 'VS Code', 'Figma', 'CI/CD', 'LaTeX'],
+    items: ['GitHub / Git', 'VS Code', 'Figma', 'CI/CD', 'Zapier', 'Microsoft 365'],
   },
 ];
 
 function Skills() {
   return (
-    <div className="skills-container" id="skills">
+    <div className="skills-container section" id="skills">
       <h2>Skills</h2>
       <p className="skills-subtitle">What I work with</p>
 

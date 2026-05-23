@@ -10,10 +10,10 @@ function HeroSection() {
   useEffect(() => {
     const typed = new Typed(typedRef.current, {
       strings: [
-        'a Full Stack Developer',
-        'a Computer Enthusiast',
+        'an IT Support Professional',
+        'a CS Graduate',
         'a Problem Solver',
-        'a Cyber Security Consultant',
+        'a Cyber Security Enthusiast',
         'a Fast Learner',
       ],
       typeSpeed: 50,
@@ -25,7 +25,7 @@ function HeroSection() {
   }, []);
 
   return (
-    <div className="hero-container" id="hero">
+    <div className="hero-container section" id="hero">
       <p className="hero-pre">
         I'm <span ref={typedRef}></span>
       </p>
@@ -46,8 +46,13 @@ function HeroSection() {
         </a>
       </div>
 
-      <a href="/Hamzah CV.pdf" download className="hero-resume-btn">
-        <FaDownload /> Resume
+      <a href="/Hamzah_Patel_CV.pdf" download className="hero-resume-btn">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+          <path d="M12 3V15" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+          <path d="M7 10L12 15L17 10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+          <path d="M21 21H3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+        Resume
       </a>
     </div>
   );

@@ -1,5 +1,5 @@
 .skills-container {
-  padding: 5rem 2rem;
+  padding: 3rem 2rem;
   max-width: 1100px;
   margin: 0 auto;
 }
@@ -18,9 +18,15 @@
 }
 
 .skills-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  flex-wrap: wrap;
   gap: 1.5rem;
+  justify-content: center;
+}
+
+.skill-card {
+  flex: 0 1 calc(33.333% - 1rem);
+  box-sizing: border-box;
 }
 
 .skill-card {
@@ -62,7 +68,14 @@
 }
 
 @media (max-width: 768px) {
+  .skills-container {
+    padding: 2rem 1rem;
+  }
   .skills-grid {
-    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .skill-card {
+    flex: 0 1 calc(50% - 1rem);
   }
 }

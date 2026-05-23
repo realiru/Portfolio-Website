@@ -1,3 +1,4 @@
+import { useEffect, useRef } from 'react';
 import './Project.css';
 
 const projects = [
@@ -8,7 +9,7 @@ const projects = [
     description:
       'Capstone project: A React Native Android app to monitor sun exposure. Implemented custom JWT authentication after discovering the original Expo library was deprecated. Nominated for Largest Community Impact Award.',
     tags: ['React Native', 'JWT', 'TypeScript'],
-    github: 'https://github.com/realiru',
+    github: 'https://github.com/uoa-compsci399-s1-2024/capstone-project-2024-s1-team-7-noot-noot',
     live: null,
   },
   {
@@ -28,7 +29,7 @@ const projects = [
     description:
       'Deployed Pi-hole on a Raspberry Pi 3B for network-wide ad and DNS filtering. Configured via SSH and Linux CLI. Gained hands-on experience with networking and system administration.',
     tags: ['Linux', 'Raspberry Pi', 'Networking'],
-    github: 'https://github.com/realiru',
+    github: null,
     live: null,
   },
   {
@@ -44,14 +45,37 @@ const projects = [
 ];
 
 function Projects() {
+  const cardRefs = useRef([]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('project-card--visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12 }
+    );
+    cardRefs.current.forEach((el) => { if (el) observer.observe(el); });
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <div className="projects-container" id="projects">
+    <div className="projects-container section" id="projects">
       <h2>Projects</h2>
       <p className="projects-subtitle">Check out my work</p>
 
       <div className="projects-grid">
-        {projects.map((project) => (
-          <div key={project.id} className="project-card">
+        {projects.map((project, i) => (
+          <div
+            key={project.id}
+            className="project-card"
+            ref={(el) => (cardRefs.current[i] = el)}
+            style={{ transitionDelay: `${i * 80}ms` }}
+          >
             <div className="project-thumb">
               <span className="project-emoji">{project.emoji}</span>
             </div>

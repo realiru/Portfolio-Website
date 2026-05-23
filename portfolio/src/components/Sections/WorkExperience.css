@@ -1,5 +1,5 @@
 .work-container {
-  padding: 5rem 2rem;
+  padding: 3rem 2rem;
   max-width: 1100px;
   margin: 0 auto;
 }
@@ -32,9 +32,23 @@
   background: #d4b896;
 }
 
+/* ── slide in from left on scroll ── */
 .timeline-item {
   position: relative;
   margin-bottom: 2.5rem;
+  opacity: 0;
+  transform: translateX(-28px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.timeline-item:nth-child(1) { transition-delay: 0ms; }
+.timeline-item:nth-child(2) { transition-delay: 80ms; }
+.timeline-item:nth-child(3) { transition-delay: 160ms; }
+.timeline-item:nth-child(4) { transition-delay: 240ms; }
+
+.timeline-item--visible {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .timeline-dot {
@@ -78,4 +92,10 @@
   color: #6b5040;
   line-height: 1.7;
   margin-bottom: 0.2rem;
+}
+
+@media (max-width: 768px) {
+  .work-container {
+    padding: 2rem 1rem;
+  }
 }

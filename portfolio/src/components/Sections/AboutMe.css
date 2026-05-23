@@ -1,5 +1,5 @@
 .about-container {
-  padding: 5rem 2rem;
+  padding: 3rem 2rem;
   max-width: 1100px;
   margin: 0 auto;
 }
@@ -16,16 +16,10 @@
 .about-container h2 {
   font-size: clamp(2rem, 4vw, 2.8rem);
   color: #3b1f0a;
-  margin-bottom: 0.4rem;
-  text-align: center;
-  font-family: 'Playfair Display', 'Georgia', serif;
+  margin-bottom: 2.5rem;
 }
 
-.about-container .section-label {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
+/* ── Desktop: two columns ── */
 .about-grid {
   display: grid;
   grid-template-columns: 280px 1fr;
@@ -42,7 +36,7 @@
   position: absolute;
   inset: 12px -12px -12px 12px;
   border: 2px solid #d4b896;
-  border-radius: 12px;
+  border-radius: 14px;
   z-index: -1;
 }
 
@@ -53,6 +47,7 @@
   object-position: top center;
   border-radius: 12px;
   display: block;
+  background: #f0e8dc;
 }
 
 .about-photo-placeholder {
@@ -60,6 +55,7 @@
   height: 310px;
   background: #ebd9c8;
   border-radius: 12px;
+  display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.5rem;
@@ -74,6 +70,7 @@
   font-size: 0.97rem;
 }
 
+/* ── Read More hidden on desktop ── */
 .about-extra {
   display: block;
 }
@@ -82,6 +79,7 @@
   display: none;
 }
 
+/* ── Fact cards ── */
 .about-facts {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -112,9 +110,10 @@
   color: #4a3020;
 }
 
+/* ── Mobile ── */
 @media (max-width: 768px) {
   .about-container {
-    padding: 3rem 1.25rem;
+    padding: 2rem 1rem;
   }
 
   .about-grid {
@@ -132,15 +131,15 @@
   }
 
   .about-photo {
-    width: 160px;
-    height: 190px;
-    border-radius: 12px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
   }
 
   .about-photo-placeholder {
-    width: 160px;
-    height: 190px;
-    border-radius: 12px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
     font-size: 1.5rem;
   }
 

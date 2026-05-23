@@ -5,9 +5,9 @@ function AboutMe() {
   const [expanded, setExpanded] = useState(false);
 
   return (
-    <div className="about-container" id="about">
-      <h2>About Me</h2>
+    <div className="about-container section" id="about">
       <p className="section-label">Who I am</p>
+      <h2>About Me</h2>
 
       <div className="about-grid">
         <div className="about-photo-wrapper">
@@ -24,27 +24,25 @@ function AboutMe() {
         </div>
 
         <div className="about-text">
+          {/* always visible */}
           <p>
-            Hi, my name is Hamzah! I'm a Software Engineer with a degree in
-            Computer Science from the University of Auckland, passionate about
-            creating secure, scalable, and user-focused solutions.
+            Hi, I'm Hamzah. CS grad from the University of Auckland, currently
+            working in technical support at Spark NZ and looking to move into a
+            dedicated IT support or cyber security role.
           </p>
           <p>
-            I've worked on projects spanning full-stack development, cloud
-            technologies, and cybersecurity, including a UV exposure tracking
-            app nominated for the Largest Community Impact Award.
+            I've built and shipped real projects: A network-wide DNS filtering
+            system on Linux, a client website self-hosted on AWS Lightsail, a
+            mobile app with custom JWT authentication, and an automated data
+            pipeline for a freelance client.
           </p>
 
+          {/* hidden on mobile until expanded */}
           <div className={`about-extra ${expanded ? 'about-extra--open' : ''}`}>
             <p>
-              Proficient in Python, Java, JavaScript, ReactJS, SQL, and Agile
-              practices. I enjoy solving complex problems, optimising systems, and
-              automating workflows for real-world impact.
-            </p>
-            <p>
-              Outside of coding, I'm curious by nature always exploring new
-              tools and technologies. I enjoy bouldering, motorbikes, and
-              continuous learning.
+              I'm currently studying toward CompTIA Security+ and genuinely
+              enjoy the problem-solving side of tech. Outside of work I boulder,
+              ride motorbikes, and travel whenever I can.
             </p>
           </div>
 
@@ -71,7 +69,7 @@ function AboutMe() {
             </div>
             <div className="about-fact">
               <strong>Currently</strong>
-              <span>Customer Advisor @ Spark NZ</span>
+              <span>IT Support · Open to Opportunities</span>
             </div>
           </div>
         </div>

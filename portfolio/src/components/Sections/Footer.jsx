@@ -2,7 +2,7 @@ import './Footer.css';
 
 function Footer() {
   return (
-    <footer className="footer">
+    <footer className="footer section">
       <div className="footer-inner">
         <p>
           Built by <strong>Hamzah Patel</strong> &nbsp;·&nbsp;

@@ -20,8 +20,11 @@ function Navbar() {
     closeMobileMenu();
     const el = document.getElementById(id);
     if (el) {
-      const offset = 80;
-      const top = el.getBoundingClientRect().top + window.scrollY - offset;
+      const offset = 80; // header height
+      const rect = el.getBoundingClientRect();
+      const elTop = rect.top + window.scrollY;
+      // center the element in viewport, then subtract header offset
+      const top = Math.max(0, Math.round(elTop - (window.innerHeight / 2 - rect.height / 2) - offset));
       window.scrollTo({ top, behavior: 'smooth' });
     }
   };
@@ -117,6 +120,9 @@ function Navbar() {
           </li>
           <li className="nav-item">
             <button className="nav-links" onClick={() => scrollToSection('skills')}>Skills</button>
+          </li>
+          <li className="nav-item">
+            <button className="nav-links" onClick={() => scrollToSection('education')}>Education</button>
           </li>
           <li className="nav-item">
             <button className="nav-links" onClick={() => scrollToSection('projects')}>Projects</button>
