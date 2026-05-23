@@ -29,7 +29,7 @@ const jobs = [
   },
   {
     id: 3,
-    date: 'May – Jul 2025',
+    date: 'May 2025 – Jul 2025',
     role: 'Sales Representative · Contract',
     company: 'Insight Marketing',
     points: [
