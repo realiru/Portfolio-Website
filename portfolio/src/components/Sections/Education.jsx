@@ -33,16 +33,15 @@ function Education() {
         <div className="edu-card edu-card--cert">
           <div className="edu-header">
             <div>
-              <h3>CompTIA Security+</h3>
+              <h3>CompTIA A+ (220-1101)</h3>
               <p className="edu-institution">CompTIA</p>
               <p className="edu-dates">In Progress · Est. 2026</p>
             </div>
             <span className="edu-badge edu-badge--progress">In Progress</span>
           </div>
           <p className="edu-cert-desc">
-            Self-study toward industry-standard cyber security certification.
-            Covers network security, threats and vulnerabilities, access control,
-            cryptography, and risk management.
+            Self-study toward industry-standard IT certification.
+            Covers hardware, networking, cloud computing, and security fundamentals.
           </p>
         </div>
       </div>

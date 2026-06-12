@@ -40,7 +40,7 @@ function AboutMe() {
           {/* hidden on mobile until expanded */}
           <div className={`about-extra ${expanded ? 'about-extra--open' : ''}`}>
             <p>
-              I'm currently studying toward CompTIA Security+ and genuinely
+              I'm currently studying toward CompTIA A+ (220-1101) and genuinely
               enjoy the problem-solving side of tech. Outside of work I boulder,
               ride motorbikes, and travel whenever I can.
             </p>
