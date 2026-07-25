@@ -4,18 +4,6 @@ import './WorkExperience.css';
 const jobs = [
   {
     id: 1,
-    date: 'Apr 2026 – Present',
-    role: 'Sales Development Representative',
-    company: 'Hevinsoft Limited · Contract',
-    points: [
-      'Conducting outbound lead generation and qualifying prospects based on technical fit with cloud infrastructure solutions.',
-      'Managing leads through CRM and supporting the sales process through to client onboarding.',
-      'Attending product demonstrations and follow-up calls, building familiarity with cloud technology sales cycles.',
-      'Running alongside full-time work at Spark, self-directed at approximately 10 hours per week.',
-    ],
-  },
-  {
-    id: 2,
     date: 'Apr 2023 – Present',
     role: 'Customer Advisor',
     company: 'Spark NZ',
@@ -25,6 +13,17 @@ const jobs = [
       'Took on additional responsibility for stock intake, transfers, dispatch, and admin from July 2025.',
       'Progressing toward shift lead through internal qualifications.',
       'Shadowed data scientists and engineers, expanding knowledge of analytics and network security.',
+    ],
+  },
+  {
+    id: 2,
+    date: '2025',
+    role: 'Freelance Web Developer',
+    company: 'Whitespace Media · Contract',
+    points: [
+      'Built and redesigned client websites end to end, from layout and responsive design through to deployment.',
+      'Handled form rebuilds with custom validation and workflow automation to reduce manual data handling.',
+      'Worked directly with clients to turn requirements into working, maintainable sites.',
     ],
   },
   {

@@ -33,7 +33,7 @@ function Education() {
         <div className="edu-card edu-card--cert">
           <div className="edu-header">
             <div>
-              <h3>CompTIA A+ (220-1101)</h3>
+              <h3>CompTIA A+ (220-1201)</h3>
               <p className="edu-institution">CompTIA</p>
               <p className="edu-dates">In Progress · Est. 2026</p>
             </div>

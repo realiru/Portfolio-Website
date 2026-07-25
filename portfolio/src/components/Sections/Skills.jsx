@@ -10,7 +10,7 @@ const skillData = [
     items: ['React JS', 'React Native', '.NET Core', 'Tailwind CSS'],
   },
   {
-    category: 'Cloud & Infrastructure',
+    category: 'Cloud/Infrastructure',
     items: ['AWS Lightsail', 'Linux', 'SSH', 'DNS', 'Raspberry Pi', 'Network Security'],
   },
   {

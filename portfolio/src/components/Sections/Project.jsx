@@ -4,6 +4,26 @@ import './Project.css';
 const projects = [
   {
     id: 1,
+    emoji: '🖥️',
+    title: 'Active Directory Home Lab',
+    description:
+      'Built a two-VM Windows Server 2022 and Windows 11 domain in VirtualBox. Set up AD DS, DNS, OUs, security groups, and Group Policy, then ran real helpdesk drills: password resets, account lockouts, and group changes. Diagnosed a GPO not applying using gpresult, tracing it to a computer object in the wrong OU.',
+    tags: ['Windows Server', 'Active Directory', 'Group Policy', 'DNS'],
+    github: null,
+    live: null,
+  },
+  {
+    id: 2,
+    emoji: '📡',
+    title: 'Remote Access (Wake on LAN)',
+    description:
+      'Set up a Raspberry Pi as an always-on home server to remotely boot and access my Windows PC from anywhere. Built a Flask web app that sends a Wake on LAN packet on demand, then connects over a Tailscale VPN tunnel with RDP and push notifications when the PC comes online.',
+    tags: ['Raspberry Pi', 'Tailscale', 'Flask', 'Networking'],
+    github: null,
+    live: 'https://www.linkedin.com/feed/update/urn:li:activity:7482663927487746048/',
+  },
+  {
+    id: 3,
     emoji: '☀️',
     title: 'UV Exposure Tracker',
     description:
@@ -13,17 +33,17 @@ const projects = [
     live: null,
   },
   {
-    id: 2,
-    emoji: '📋',
-    title: 'Form Data Automation',
+    id: 4,
+    emoji: '📶',
+    title: 'IoT Ping Device',
     description:
-      "Freelance: Rebuilt a client's Squarespace form in HTML/CSS, added JavaScript validation and regex checks, and integrated Zapier webhooks to automate secure data transfer into Google Drive and Sheets.",
-    tags: ['JavaScript', 'Zapier', 'HTML/CSS'],
+      'Two ESP8266 devices in separate homes that ping each other over the internet. Press a button on one and an LED lights up on the other, with a confirm-to-clear acknowledgement system. Devices talk over HiveMQ cloud MQTT. Handled the wiring, soldering, and firmware end to end.',
+    tags: ['ESP8266', 'MQTT', 'Arduino', 'Hardware'],
     github: null,
-    live: null,
+    live: 'https://www.linkedin.com/posts/hamzahpatel_this-took-me-longer-than-i-thought-and-im-activity-7474012925213487104-CP5o?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD1z4YYB2WiN3RtvO8WLHWWvwpMuQTJ6fGI',
   },
   {
-    id: 3,
+    id: 5,
     emoji: '🍓',
     title: 'Network-wide DNS Filter',
     description:
@@ -33,7 +53,17 @@ const projects = [
     live: null,
   },
   {
-    id: 4,
+    id: 6,
+    emoji: '📋',
+    title: 'Form Data Automation',
+    description:
+      "Freelance: Rebuilt a client's Squarespace form in HTML/CSS, added JavaScript validation and regex checks, and integrated Zapier webhooks to automate secure data transfer into Google Drive and Sheets.",
+    tags: ['JavaScript', 'Zapier', 'HTML/CSS'],
+    github: null,
+    live: null,
+  },
+  {
+    id: 7,
     emoji: '💍',
     title: 'Divaria',
     description:
