@@ -1,5 +1,6 @@
 import HeroSection from './Sections/HeroSection.jsx';
 import AboutMe from './Sections/AboutMe.jsx';
+import LinkedInPosts from './Sections/LinkedInPosts.jsx';
 import Skills from './Sections/Skills.jsx';
 import Education from './Sections/Education.jsx';
 import WorkExperience from './Sections/WorkExperience.jsx';
@@ -33,6 +34,7 @@ function Home() {
     <>
       <HeroSection />
       <AboutMe />
+      <LinkedInPosts />
       <Skills />
       <Education />
       <WorkExperience />

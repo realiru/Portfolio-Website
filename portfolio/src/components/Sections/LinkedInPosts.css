@@ -1,0 +1,122 @@
+.li-container {
+  padding: 5rem 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.li-container h2 {
+  font-size: 2.5rem;
+  color: #3b1f0a;
+  text-align: center;
+  margin-bottom: 0.25rem;
+  font-family: 'Playfair Display', 'Georgia', serif;
+}
+
+.li-subtitle {
+  text-align: center;
+  color: #9b7a5a;
+  margin-bottom: 3rem;
+}
+
+.li-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.li-card {
+  background: #fff9f3;
+  border: 1px solid #d4b896;
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  opacity: 0;
+  transform: translateY(24px) scale(0.97);
+  transition: opacity 0.45s ease, transform 0.45s ease, box-shadow 0.2s;
+}
+
+.li-card--visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.li-card--visible:hover {
+  transform: translateY(-4px) scale(1);
+  box-shadow: 0 10px 30px rgba(93, 58, 26, 0.12);
+}
+
+.li-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.9rem;
+}
+
+.li-icon {
+  color: #b36b3b;
+  font-size: 1.35rem;
+}
+
+.li-date {
+  font-size: 0.78rem;
+  color: #9b7a5a;
+  font-weight: 500;
+}
+
+.li-text {
+  font-size: 0.9rem;
+  color: #4a3020;
+  line-height: 1.65;
+  flex: 1;
+  margin-bottom: 1rem;
+  /* clamp long posts to keep cards even */
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.li-readmore {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #b36b3b;
+}
+
+/* ── skeleton loading state ── */
+.li-card--skeleton {
+  opacity: 1;
+  transform: none;
+  cursor: default;
+  pointer-events: none;
+}
+
+.li-skeleton-line {
+  height: 12px;
+  border-radius: 6px;
+  margin-bottom: 0.75rem;
+  background: linear-gradient(90deg, #f0e4d5 25%, #e8d8c4 37%, #f0e4d5 63%);
+  background-size: 400% 100%;
+  animation: li-shimmer 1.4s ease infinite;
+}
+
+.li-skeleton-line.short {
+  width: 60%;
+}
+
+@keyframes li-shimmer {
+  0% { background-position: 100% 50%; }
+  100% { background-position: 0 50%; }
+}
+
+/* ── mobile ── */
+@media (max-width: 768px) {
+  .li-container {
+    padding: 3rem 1.25rem;
+  }
+  .li-grid {
+    grid-template-columns: 1fr;
+  }
+}
